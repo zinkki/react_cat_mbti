@@ -7,12 +7,11 @@ const KakaoShareBtn = ({data}) => {
 	const url = "https://zinkkis-test.netlify.app/";
 	const resultUrl = window.location.href;
 
-	console.log('hey~',url, resultUrl);
+	console.log('hey~data',data);
 
 	React.useEffect(() => {
 		Kakao.cleanup();
 		Kakao.init("16a4fcd707b3c92fe86e9de778bf5301");
-		console.log("hey",Kakao.isInitialized());
 	},[]);
 
 const shareKakao = () => {
@@ -20,12 +19,11 @@ const shareKakao = () => {
 		objectType: 'feed',
 		content: {
 		  title: '캔따개 테스트 결과',
-		  description: '캔따개에게 가장 알맞은 집사님은?',
-		  imageUrl:
-			'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+		  description: `캔따개에게 가장 알맞은 집사님은?${data.name}`,
+		  imageUrl: url + data.img,
 		  link: {
-			mobileWebUrl: 'https://developers.kakao.com',
-			androidExecutionParams: 'test',
+			mobileWebUrl: resultUrl,
+			webUrl: resultUrl,
 		  },
 		},
 		buttons: [
@@ -33,6 +31,7 @@ const shareKakao = () => {
 			title: '나도 테스트 하러가기!',
 			link: {
 			  mobileWebUrl: url,
+			  webUrl: url,
 			},
 		  },
 		]
