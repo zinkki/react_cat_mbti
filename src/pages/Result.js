@@ -33,7 +33,7 @@ const Result = () => {
               <img alt='cat_img_result' src={resultData.image} width={300} height={300} className="rounded-circle" />
             </LogoImage>
             <Desc>캔따개({resultData.best})와 맞는 주인님은 바로...!</Desc>
-            <Desc_name>'{resultData.name}' 입니다!</Desc_name>
+            <DescName>'{resultData.name}' 입니다!</DescName>
             <DescSub>{resultData.desc}</DescSub>
             <ButtonGroup>
               <Button style={{marginRight:'10px'}} onClick={() => navigate('/')}>REPLAY</Button>
@@ -81,7 +81,7 @@ const Desc = styled.div `
   margin-bottom: 10px;
   white-space: pre-line;
 `
-const Desc_name = styled.div`
+const DescName = styled.div`
   font-size: 20px;
   margin-bottom: 20px;
 `
