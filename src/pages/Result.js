@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { ResultData } from '../assets/data/resultdata';
+import KakaoShareBtn from '../component/KakaoShareBtn';
 
 const Result = () => {
 
@@ -34,7 +35,7 @@ const Result = () => {
             <Desc>캔따개의 주인님은 바로..!{resultData.name} 입니다!</Desc>
             <ButtonGroup>
               <Button onClick={() => navigate('/')}>REPLAY</Button>
-              <Button style={{marginLeft:'20px'}}>카카오톡 공유하기</Button>
+              <KakaoShareBtn data={resultData} />
             </ButtonGroup>
           </Contents>
     
