@@ -7,7 +7,7 @@ const KakaoShareBtn = ({data}) => {
 	const url = "https://zinkkis-test.netlify.app/";
 	const resultUrl = window.location.href;
 
-	console.log('hey~',result, resultUrl);
+	console.log('hey~',url, resultUrl);
 
 	React.useEffect(() => {
 		Kakao.cleanup();
