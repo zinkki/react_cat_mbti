@@ -25,17 +25,19 @@ const Result = () => {
     return(
         <Wrapper> 
     
-          <Header>캔따개 테스트 결과화면</Header>
+          <Header>캔따개 테스트</Header>
     
           <Contents>
           <Title>결과 보기</Title>
             <LogoImage>
-              <img alt='cat_img_result' src={resultData.image} width={350} height={350} className="rounded-circle" />
+              <img alt='cat_img_result' src={resultData.image} width={300} height={300} className="rounded-circle" />
             </LogoImage>
-            <Desc>캔따개의 주인님은 바로..!{resultData.name} 입니다!</Desc>
+            <Desc>캔따개({resultData.best})와 맞는 주인님은 바로...!</Desc>
+            <Desc_name>'{resultData.name}' 입니다!</Desc_name>
+            <Desc_sub>{resultData.desc}</Desc_sub>
             <ButtonGroup>
-              <Button onClick={() => navigate('/')}>REPLAY</Button>
-              <KakaoShareBtn data={resultData} />
+              <Button style={{marginRight:'10px'}} onClick={() => navigate('/')}>REPLAY</Button>
+              <KakaoShareBtn style={{marginLeft:'10px'}} data={resultData} />
             </ButtonGroup>
           </Contents>
     
@@ -46,16 +48,19 @@ const Result = () => {
 export default Result;
 
 const Wrapper = styled.div `
-  height: 100vh;
+  height: 100%;
   width: 100%;
   font-family: "EF_Diary";
+  background: linear-gradient(to bottom, #9bc5f7 20%, #ddecff 80%);
 `
 const Header = styled.div `
+  padding-top: 2rem;
   font-size: 40pt;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "EF_Diary";
+  font-weight: 900;
 `
 const Contents = styled.div `
   display: flex;
@@ -71,11 +76,25 @@ const LogoImage = styled.div `
   margin-top: 20px;
 `
 const Desc = styled.div `
-  font-soze: 20px;
+  font-size: 20px;
   margin-top: 30px;
+  margin-bottom: 10px;
+  white-space: pre-line;
+`
+const Desc_name = styled.div`
+  font-size: 20px;
   margin-bottom: 20px;
 `
-const ButtonGroup = styled.div `
+const Desc_sub = styled.div`
+  font-size: 15px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 5px;
+`
+const ButtonGroup = styled.div`
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
 `

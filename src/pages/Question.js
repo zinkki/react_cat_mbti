@@ -92,11 +92,12 @@ const Question = () => {
 
     return (
         <Wrapper>
-            <ProgressBar striped variant='danger' now={(questionNo/QuestionData.length)*100} style={{marginTop:'20px'}}/>
+            <ProgressBar striped now={(questionNo/QuestionData.length)*100}/>
+            <Question_No> Question.{QuestionData[questionNo].id} </Question_No> 
             <Title>{QuestionData[questionNo].title}</Title>
 						<ButtonGroup>
-            	<Button onClick={()=>handleClickBtn(1, QuestionData[questionNo].type)} style={{width:"35%", minHeight: "100px", fontSize:"15pt", margin:"10px 10px 10px 10px"}}>{QuestionData[questionNo].answerA}</Button>
-            	<Button onClick={()=>handleClickBtn(0, QuestionData[questionNo].type)} style={{width:"35%", minHeight: "100px", fontSize:"15pt", margin:"10px 10px 10px 10px"}}>{QuestionData[questionNo].answerB}</Button>
+            	<Button onClick={()=>handleClickBtn(1, QuestionData[questionNo].type)} style={{width:"80%", minHeight: "20vh", fontSize:"15px", margin:"10px 10px 10px 10px"}}>{QuestionData[questionNo].answerA}</Button>
+            	<Button onClick={()=>handleClickBtn(0, QuestionData[questionNo].type)} style={{width:"80%", minHeight: "20vh", fontSize:"15px", margin:"10px 10px 10px 10px"}}>{QuestionData[questionNo].answerB}</Button>
 						</ButtonGroup>
         </Wrapper>
     );
@@ -108,14 +109,22 @@ const Wrapper = styled.div `
   height: 100vh;
   width: 100%;
   font-family: "EF_Diary";
+  background: linear-gradient(to bottom, #9bc5f7 20%, #ddecff 80%);
   `
+const Question_No = styled.div `
+  margin: 2rem 1rem 1rem 1rem;
+	font-size: 20px;
+	text-align: center;
+  font-weight: 700;
+`
 const Title = styled.div `
-	font-size: 25pt;
+  padding: 1rem 1rem 1rem 1rem;
+	font-size: 20px;
 	text-align: center;
 `
 const ButtonGroup = styled.div `
 	display: flex;
-	flex-direction : row;
+	flex-direction : column;
 	align-items: center;
 	justify-content: center;
 `
