@@ -34,7 +34,7 @@ const Result = () => {
             </LogoImage>
             <Desc>캔따개({resultData.best})와 맞는 주인님은 바로...!</Desc>
             <Desc_name>'{resultData.name}' 입니다!</Desc_name>
-            <Desc_sub>{resultData.desc}</Desc_sub>
+            <DescSub>{resultData.desc}</DescSub>
             <ButtonGroup>
               <Button style={{marginRight:'10px'}} onClick={() => navigate('/')}>REPLAY</Button>
               <KakaoShareBtn style={{marginLeft:'10px'}} data={resultData} />
@@ -85,7 +85,7 @@ const Desc_name = styled.div`
   font-size: 20px;
   margin-bottom: 20px;
 `
-const Desc_sub = styled.div`
+const DescSub = styled.div`
   font-size: 15px;
   margin-bottom: 20px;
   padding-top: 5px;
