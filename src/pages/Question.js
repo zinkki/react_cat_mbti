@@ -93,7 +93,7 @@ const Question = () => {
     return (
         <Wrapper>
             <ProgressBar striped now={(questionNo/QuestionData.length)*100}/>
-            <Question_No> Question.{QuestionData[questionNo].id} </Question_No> 
+            <QuestionNo> Question.{QuestionData[questionNo].id} </QuestionNo> 
             <Title>{QuestionData[questionNo].title}</Title>
 						<ButtonGroup>
             	<Button onClick={()=>handleClickBtn(1, QuestionData[questionNo].type)} style={{width:"80%", minHeight: "20vh", fontSize:"15px", margin:"10px 10px 10px 10px"}}>{QuestionData[questionNo].answerA}</Button>
@@ -111,7 +111,7 @@ const Wrapper = styled.div `
   font-family: "EF_Diary";
   background: linear-gradient(to bottom, #9bc5f7 20%, #ddecff 80%);
   `
-const Question_No = styled.div `
+const QuestionNo = styled.div `
   margin: 2rem 1rem 1rem 1rem;
 	font-size: 20px;
 	text-align: center;
