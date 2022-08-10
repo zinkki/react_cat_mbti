@@ -20,7 +20,7 @@ const shareKakao = () => {
 		content: {
 		  title: '캔따개 테스트 결과',
 		  description: `캔따개에게 가장 알맞은 집사님은?${data.name}`,
-		  imageUrl: url + data.img,
+		  imageUrl: url + data.image,
 		  link: {
 			mobileWebUrl: resultUrl,
 			webUrl: resultUrl,
