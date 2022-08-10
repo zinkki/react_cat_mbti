@@ -92,7 +92,9 @@ const Question = () => {
 
     return (
         <Wrapper>
-            <ProgressBar style={{marginTop:'2rem'}} striped now={(questionNo/QuestionData.length)*100}/>
+            <Bar>
+              <ProgressBar striped now={(questionNo/QuestionData.length)*100}/>
+            </Bar>
             <QuestionNo> Question.{QuestionData[questionNo].id} </QuestionNo> 
             <Title>{QuestionData[questionNo].title}</Title>
 						<ButtonGroup>
@@ -111,6 +113,9 @@ const Wrapper = styled.div `
   font-family: "EF_Diary";
   background: linear-gradient(to bottom, #9bc5f7 20%, #ddecff 80%);
   `
+const Bar = styled.div `
+  padding-top: 2rem;
+`
 const QuestionNo = styled.div `
   margin: 2rem 1rem 1rem 1rem;
 	font-size: 20px;
