@@ -92,7 +92,7 @@ const Question = () => {
 
     return (
         <Wrapper>
-            <ProgressBar striped now={(questionNo/QuestionData.length)*100}/>
+            <ProgressBar style={{marginTop:'2rem'}} striped now={(questionNo/QuestionData.length)*100}/>
             <QuestionNo> Question.{QuestionData[questionNo].id} </QuestionNo> 
             <Title>{QuestionData[questionNo].title}</Title>
 						<ButtonGroup>
