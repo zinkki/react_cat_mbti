@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
 const { Kakao } = window;
 
@@ -7,6 +6,8 @@ const KakaoShareBtn = ({data}) => {
 
 	const url = "https://zinkkis-test.netlify.app/";
 	const resultUrl = window.location.href;
+
+	console.log('hey~',result, resultUrl);
 
 	React.useEffect(() => {
 		Kakao.cleanup();
