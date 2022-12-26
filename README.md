@@ -1,3 +1,3 @@
 # Hello 
 
-zinkkis-test.netlify.app
+https://zinkkis-test.netlify.app
